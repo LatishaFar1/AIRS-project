@@ -15,7 +15,9 @@ return (
     <div style={{fontSize: 18}}>
     <p>
     This app provides a platform to report any incidents related to Avengers' (and affilates) that leads to destruction of personal and public property. </p>
+    <>
     <p>Fill out the provided form and a member of our team will contact you about next steps.  </p>
+   </>
     </div>
 
   <span> </span> <img src={avengersLogo} alt="avengers logo"></img>
