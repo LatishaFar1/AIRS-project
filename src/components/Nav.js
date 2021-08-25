@@ -4,20 +4,23 @@ import {Link} from "react-router-dom";
 function Nav(){
     
     return(
-        <nav className="nav">
-            <h1></h1>
-            <div className="Links">
-                <Link to="/">Home</Link>
-                <Link to="/Lawyers">Team</Link>
-                <Link to="/incidents/new">Report an Incident</Link>
-                <Link to="/incidents/:id">Recent Incidents</Link>
-           
+      
+        <nav className="navbar">
+            <div>
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/Lawyers" className="nav-link">Team</Link>
+                <Link to="/incidents/new" className="nav-link">Report an Incident</Link>
+                <Link to="/incidents/:id" className="nav-link">Recent Incidents</Link>
            </div>
         </nav>
+
+    
     )
     
 
 };
+
+
 
 
 export default Nav;
