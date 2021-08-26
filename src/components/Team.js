@@ -18,10 +18,10 @@ return (
         <div className="team" key={team.id}>
            <img src={team.image} alt={team.name}/>
             <h2>{team.name}</h2>
+            <h3>{team.Job}</h3>
             <p>{team.Email}</p>
             </div>
-    
-    
+           
     )}
     </div>
 )

@@ -99,7 +99,18 @@ nav a:hover:before{
   }
 }
 
-/* Description */
+/* Team */
+ 
+.team{
+  width: 400px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  margin-top: 20px;
+  margin-left: 660px;
+  font-family: 'Anton', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 
 /* IncidentsList*/
 
@@ -107,7 +118,8 @@ nav a:hover:before{
   width: 400px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
-  margin: 3rem;
+  margin-top: 20px;
+  margin-left: 660px;
 }
 
 .img-container{
@@ -139,4 +151,40 @@ img{
   align-items: center;
 }
 
+/* Incident Form*/
 
+.form{
+
+margin: 0;
+padding: 25px;
+border-radius: 5px;
+box-sizing: border-box;
+background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700478170.jpg");
+background-repeat: no-repeat;
+background-position: center;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.form .inputs{
+  width: 400px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 8.5px;
+  font-size: 50px;
+  color: rgba(227, 32, 32, 0.784);
+  font-weight: 500;
+}
+
+.Button{
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(181, 79, 94);
+  color: white;
+}

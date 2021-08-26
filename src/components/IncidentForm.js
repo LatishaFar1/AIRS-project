@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 
 
+
 function IncidentForm(){
 
     const[date, setDate] =useState("");
     const[avenger, setAvenger] = useState("");
     const[complaint, setComplaint] =useState("");
     const[image, setImage] = useState("")
+
 
     function handleSubmit(e){
         const formInfo = {date, avenger, complaint, image};
@@ -16,33 +18,41 @@ function IncidentForm(){
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formInfo)
         })
+       
     };
 
 
 return (
     <>
     <h2>Report an Incident</h2>
-
-    <form onSubmit={handleSubmit}>
-        <div>
+    
+    <form  onSubmit={handleSubmit}>
+    <div className="form">
+            <div className="inputs">
     <label>Incident Date:</label>
+    <br/>
     <input name="date" type="date" onChange={(e) => setDate(e.target.value)} value={date}/>
-     </div>
-     <div>
+    
+    <br/>
     <label>Primary Avenger:</label>
-    <input type="text" placeholder="Avenger" name="Avenger" onChange={(e) => setAvenger(e.target.value)} value={avenger}/>
-    </div>
-    <div>
+    <br/>
+    <input type="text" placeholder=" Enter Avenger" name="Avenger" onChange={(e) => setAvenger(e.target.value)} value={avenger}/>
+   
+    <br/>
     <label>Complaint:</label>
-    <textarea placeholder="complaint" name="complaint" type="text" onChange={(e) => setComplaint(e.target.value)} value={complaint}> </textarea>
-    </div>
-    <div>
+    <br/>
+    <textarea placeholder="Type your Complaint" name="complaint" type="text" onChange={(e) => setComplaint(e.target.value)} value={complaint}> </textarea>
+   
+    <br/>
     <label>Picture of the Incident:</label>
-    <input type="text" placeholder="image URL" name="image" onChange={(e) => setImage(e.target.value)} value={image}/>
+    <br/>
+    <input type="text" placeholder="Paste the image URL" name="image" onChange={(e) => setImage(e.target.value)} value={image}/>
+    <br/>
+    <button className="Button">Submit</button>
     </div>
-    <button>Submit</button>
+    </div>
     </form>
-
+  
     </>    
 ) 
 };
