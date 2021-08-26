@@ -3,6 +3,7 @@
   font-family: 'Oswald', sans-serif;
 }
 
+/* Navigation */
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 .back{
@@ -98,9 +99,29 @@ nav a:hover:before{
   }
 }
 
-img{
- height: 400;
- width: 400;
+/* Description */
+
+/* IncidentsList*/
+
+.card-container{
+  width: 400px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  margin: 3rem;
+}
+
+.img-container{
+  overflow: hidden;
+  height: 200px;
+}
+
+.card-complaint{
+  margin: 1rem;
+  margin-top: 0.15rem;
+}
+
+.card-title{
+  margin-bottom: 0.5rem;
 }
 
 .resolveButton{
@@ -110,5 +131,12 @@ img{
   padding: 10px 60px;
   border-radius: 5px;
   margin: 10px 0px;
-  cursor: pointer;
 }
+
+img{
+  height: 300px;
+  width: 450px;
+  align-items: center;
+}
+
+
