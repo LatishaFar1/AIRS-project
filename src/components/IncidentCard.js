@@ -15,10 +15,11 @@ function IncidentCard({incident}){
     };
 
     return(
-            <div className="card-container" style={{justifyContent: "center"}} >
-            <div className="img-container">
+            
+            <div className="card-container" >
+                <div className="img-container">
                 <img src={incident.image} alt={incident.avenger}  />
-            </div>
+                </div>
                 <div className="card-content">
                 <div className="card-title">{incident.date}</div>
                 <h2 className="card-title" style={{textDecoration: "underline dotted red"}} > Primary Avenger: {incident.avenger}</h2>
@@ -26,7 +27,8 @@ function IncidentCard({incident}){
                 </div>
                 <button className="resolveButton"  onClick={() => setResolved(!resolved)}>
                      {resolved ? "Resolved" : "Unresolved"}</button>
-               <button onClick={handleDelete}>Delete</button>
+                     <br></br>
+               <button className="deleteButton" onClick={handleDelete}>Delete</button>
                 </div>
           
     )

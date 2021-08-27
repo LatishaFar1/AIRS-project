@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from "react";
 import IncidentCard from "./IncidentCard";
-
-function IncidentsList(){
+function IncidentsList(props){
 
     const [incident, setIncident] = useState([]);
-   
 
 
     useEffect(() => {
@@ -13,14 +11,19 @@ function IncidentsList(){
         .then(data => setIncident(data))
     }, [])
 
+
     const incidentCards = incident.map((incident) => {
-        return <IncidentCard incident={incident} />
+        console.log(incident.id)
+        return <IncidentCard incident={incident} key={incident.id}/>
     })
 
+   
 return (
     <div >
     <h2>Recently Reported Incidents:</h2>
+       <div className="list-card">
         {incidentCards}
+        </div>
     </div>
 )
 

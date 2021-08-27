@@ -26,7 +26,7 @@ function App() {
         </Route>
 
         <Route exact path="/incidents/:id">
-          <IncidentsList/>
+          <IncidentsList />
         </Route>
 
       </Switch>

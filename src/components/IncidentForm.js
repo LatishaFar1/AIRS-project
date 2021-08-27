@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 
-
-
 function IncidentForm(){
 
     const[date, setDate] =useState("");
@@ -18,7 +16,7 @@ function IncidentForm(){
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formInfo)
         })
-       
+    
     };
 
 
