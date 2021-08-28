@@ -7,14 +7,19 @@ import IncidentForm from './components/IncidentForm';
 import IncidentsList from './components/IncidentsList';
 
 function App() {
+
+
   return (
     <div className="App">
+     
+  
       <Router>
        <Nav/>
       <Switch>
         
         <Route exact path="/">
           <Home/>
+          
        </Route>
 
        <Route exact path="/Lawyers">

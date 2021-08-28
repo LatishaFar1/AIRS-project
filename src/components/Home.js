@@ -1,11 +1,19 @@
-import React from "react";
-
+import React, {useState, useEffect} from "react";
+import EmergencyAlert from "./EmergencyAlert";
 
 function Home(){
 
     const starkLogo = "https://images-na.ssl-images-amazon.com/images/I/41-lUmt7w1L._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg";
     const shieldLogo = "https://i.etsystatic.com/9715836/r/il/030dcd/1477498432/il_570xN.1477498432_1elo.jpg"
     const randLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Rand_Corporation_logo.svg/1200px-Rand_Corporation_logo.svg.png";
+
+    const [timer, setTimer] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimer(true);
+      }, 5000);
+  }, [])
 
     return (
    <div>
@@ -20,7 +28,12 @@ function Home(){
     <>
     <p>Fill out the provided form and a member of our team will contact you about next steps.  </p>
 
-   
+       <div>
+            <EmergencyAlert trigger={timer} setTrigger={setTimer}>
+                <h2 style={{color: "chartreuse"}}>EMERGENCY ALERT</h2>
+                <p>Alien attack on blocks surrounding 123 43rd st.<br/> Evacuate immediately.</p>
+            </EmergencyAlert>
+        </div>
    
    
    

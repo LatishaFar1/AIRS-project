@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 
 function IncidentCard({incident}){
-    const [resolved, setResolved] = useState([true]);
+    const [resolved, setResolved] = useState(false);
     const history = useHistory();
 
     function handleDelete(){
@@ -13,6 +13,7 @@ function IncidentCard({incident}){
             history.push("/incidents/new")
         })
     };
+    
 
     return(
             
@@ -26,7 +27,7 @@ function IncidentCard({incident}){
                 <div className="card-complaint"> Complaint: "{incident.complaint}"</div>
                 </div>
                 <button className="resolveButton"  onClick={() => setResolved(!resolved)}>
-                     {resolved ? "Resolved" : "Unresolved"}</button>
+                     {resolved ? "Resolved"  : "Unresolved"}</button>
                      <br></br>
                <button className="deleteButton" onClick={handleDelete}>Delete</button>
                 </div>
