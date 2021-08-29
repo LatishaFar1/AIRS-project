@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useHistory} from "react";
 
 function IncidentForm(){
 
@@ -6,7 +6,7 @@ function IncidentForm(){
     const[avenger, setAvenger] = useState("");
     const[complaint, setComplaint] =useState("");
     const[image, setImage] = useState("")
-
+    const history = useHistory();
 
     function handleSubmit(e){
         const formInfo = {date, avenger, complaint, image};
@@ -16,7 +16,9 @@ function IncidentForm(){
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formInfo)
         })
-    
+        .then(() => {
+            history.push("/incidents/:id")
+        })
     };
 
 
