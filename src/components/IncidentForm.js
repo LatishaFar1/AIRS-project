@@ -11,7 +11,7 @@ function IncidentForm(){
     function handleSubmit(e){
         const formInfo = {date, avenger, complaint, image};
 
-        fetch("http://localhost:3000/incidents", {
+        fetch("https://aqueous-refuge-86539.herokuapp.com/Incidents", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formInfo)

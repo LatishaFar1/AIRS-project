@@ -7,7 +7,7 @@ function IncidentsList(props){
  
 
     useEffect(() => {
-        fetch("http://localhost:3000/incidents")
+        fetch("https://aqueous-refuge-86539.herokuapp.com/Incidents")
         .then(response => response.json())
         .then(data => setIncident(data))
     }, [])

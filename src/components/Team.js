@@ -6,7 +6,7 @@ function Team(){
     const [team, setTeam] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3000/lawyers")
+        fetch("https://aqueous-refuge-86539.herokuapp.com/Lawyers")
         .then(response => response.json())
         .then(data => setTeam(data))
     }, [])

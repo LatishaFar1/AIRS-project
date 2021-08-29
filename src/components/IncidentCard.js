@@ -6,7 +6,7 @@ function IncidentCard({incident}){
     const history = useHistory();
 
     function handleDelete(){
-        fetch("http://localhost:3000/incidents/" + incident.id, {
+        fetch("https://aqueous-refuge-86539.herokuapp.com/Incidents" + incident.id, {
             method: "DELETE"
         })
         .then(() => {
