@@ -10,7 +10,7 @@ function IncidentCard({incident}){
             method: "DELETE"
         })
         .then(() => {
-            history.push("/")
+            history.push("/incidents/new")
         })
     };
     
