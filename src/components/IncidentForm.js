@@ -1,4 +1,5 @@
-import React, {useState, useHistory} from "react";
+import React, {useState} from "react";
+import {useHistory} from "react-router-dom"
 
 function IncidentForm(){
 
