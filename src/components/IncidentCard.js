@@ -10,7 +10,7 @@ function IncidentCard({incident}){
             method: "DELETE"
         })
         .then(() => {
-            history.push("https://airs.netlify.app/incidents/new")
+            history.push("/")
         })
     };
     
