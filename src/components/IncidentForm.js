@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useHistory} from "react-router-dom"
+
 
 function IncidentForm(){
 
@@ -7,19 +7,17 @@ function IncidentForm(){
     const[avenger, setAvenger] = useState("");
     const[complaint, setComplaint] =useState("");
     const[image, setImage] = useState("")
-    const history = useHistory();
+
 
     function handleSubmit(e){
         const formInfo = {date, avenger, complaint, image};
 
-        fetch("https://aqueous-refuge-86539.herokuapp.com/Incidents", {
+        fetch("http://localhost:3000/incidents", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formInfo)
         })
-        .then(() => {
-            history.push("/incidents/:id")
-        })
+       
     };
 
 

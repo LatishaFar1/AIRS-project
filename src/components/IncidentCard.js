@@ -1,16 +1,16 @@
 import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 function IncidentCard({incident}){
     const [resolved, setResolved] = useState(false);
     const history = useHistory();
 
     function handleDelete(){
-        fetch("https://aqueous-refuge-86539.herokuapp.com/Incidents" + incident.id, {
+        fetch("http://localhost:3000/incidents/" + incident.id, {
             method: "DELETE"
         })
         .then(() => {
-            history.push("/incidents/new")
+            history.push("/")
         })
     };
     
