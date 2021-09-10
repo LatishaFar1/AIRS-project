@@ -10,3 +10,6 @@ Clone down the repo and open index.html in your favorite browser.
 
 ### Data
 This project uses a locally hosted json server you can clone down - located here: https://github.com/LatishaFar1/json-server-template
+
+## Demo 
+https://youtu.be/kvmelDyCuoA
